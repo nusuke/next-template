@@ -2,18 +2,12 @@
   "name": "curry",
   "version": "1.0.0",
   "description": "",
-  "private": true,
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix './**/*.{js,jsx,tsx,ts}'"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
   },
   "author": "",
   "license": "ISC",
