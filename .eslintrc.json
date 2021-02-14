@@ -3,11 +3,18 @@
     "browser": true,
     "es6": true
   },
-   "parserOptions": {
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
     "sourceType": "module"
   },
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": ["react"],
   "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "prettier/prettier": [
       "error",
       {

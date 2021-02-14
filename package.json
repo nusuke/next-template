@@ -7,7 +7,17 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix './**/*.{js,jsx,tsx,ts}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.tsx": "eslint --fix",
+    "*.ts": "eslint --fix",
+    "*.js": "eslint --fix"
   },
   "author": "",
   "license": "ISC",
@@ -22,19 +32,10 @@
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "typescript": "^4.1.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.tsx": "eslint --fix",
-    "*.ts": "eslint --fix",
-    "*.js": "eslint --fix"
   }
 }
